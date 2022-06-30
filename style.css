@@ -1,8 +1,8 @@
-body{
+
+.game{
     display: flex;
     margin: 0 auto;
 }
-
 .game-container{
     width: 500px;
     height: 730px;
@@ -181,19 +181,30 @@ body{
 .warningText{
     font-size: 80px;
     padding-top: 10%;
-    width: 100%;
+    top:0;
+    left: 0;
     z-index: 9999;
     text-align: center;
     background-color: rgba(93, 93, 93, 0.426) ;
-    height: 100vh;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(62, 62, 62);
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 700px ) {
     .warningText{
         display: none;
     }
+ 
+}
+
+@media only screen and (max-width: 700px ) {
+
+   html{
+    zoom: 0.6;
+}
 }
 @supports(-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     .warningText {
